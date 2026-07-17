@@ -1,11 +1,11 @@
-var express = require('express');
-var router = express.Router();
-var userModel = require("../models/userModel");
-var blogModel = require("../models/blogModel");
-var bcrypt = require('bcryptjs');
+const express = require('express');
+const router = express.Router();
+const userModel = require("../models/userModel");
+const blogModel = require("../models/blogModel");
+const bcrypt = require('bcryptjs');
 const multer  = require('multer');
 const path = require('path');
-var jwt = require('jsonwebtoken');
+const jwt = require('jsonwebtoken');
 
 const secret = "secret";
 

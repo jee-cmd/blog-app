@@ -1,6 +1,9 @@
-var mongoose = require("mongoose");
+const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/blogApp");
+mongoose.connect("mongodb://localhost:27017/blogApp")
+  .then(() => console.log("MongoDB Connected Successfully"))
+  .catch((err) => console.error("MongoDB Connection Error:", err));
+
 
 const userSchema = new mongoose.Schema({
   username: String,
